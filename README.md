@@ -1,3 +1,9 @@
+# Chiaki-Macro | Fork
+I've created this fork to try and implement my own use, and to see if I can blend another program.
+The original README.md is still listed under.
+ Will try to update as I go.
+
+
 # About
 First of all this was never setup to be a portable solution that would work on any configuration. The way it's setup works good for my setup. It may not work for you out of the box. If you have no programming knowledge it maybe be difficult to get it working. I've only tested this in combination with PS5 it may or may not work correctly with PS4 or just may need some tuning for the sleep values considering loadtimes will be very different. The code is just slapt together really quickly so don't hate me for it :p I hope this helps you get started by experimenting yourself with how you can automate things by just using screendata. Anyone is free to use this code however they like, no credit is needed. This will only run on Windows.
 

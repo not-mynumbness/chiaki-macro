@@ -139,7 +139,7 @@ def wait_for_race_start():
         if locations:
             race_start_in_1_second = True
     logging.info("Race will start in 1 second")
-
+#New mask and icon templates tp be implemented
 steering_template = cv.imread('./assets/steering.png', cv.IMREAD_UNCHANGED)
 cross_template = cv.imread('./assets/cross_template.png', cv.IMREAD_GRAYSCALE)
 cross_template_mask = cv.imread('./assets/cross_template_mask.png', cv.IMREAD_GRAYSCALE)
@@ -165,6 +165,7 @@ else:
 logging.info('Calculated window border width {}'.format(window.border_size))
 logging.info('Calculated window titlebar height {}'.format(window.titlebar_size))
 
+# Start here for Lords of the Fallen run around.
 config.load_config_file()
 race_start_steering_macro = []
 load_race_start_steering_macro()
