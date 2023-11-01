@@ -11,9 +11,7 @@ def load_config_file():
     global R1, R2, R3, CROSS, SQUARE, CIRCLE, TRIANGLE, SHARE, OPTIONS, PS, TOUCHPAD
     global SHOW_SIMILARITY_DEBUG, SHOW_DETECTION_RECT_DEBUG, SKIP_MENU_SELECTION
     global STEERING_RECT, CROSS_CENTER_RECT, CROSS_RIGHT_RECT, FINISH_RECT, GT_LOGO_RECT, RACE_START_RECT
-
-    STEERING_SIMILARITY_THRESHOLD = config_file.getfloat('CONFIG', 'STEERING_SIMILARITY_THRESHOLD')
-    USE_RACE_START_MACRO = config_file.getboolean('CONFIG', 'USE_RACE_START_MACRO')
+# globally set control inputs
     DPAD_LEFT = int(config_file.get('CONTROLS', 'DPAD_LEFT'), 0)
     DPAD_RIGHT = int(config_file.get('CONTROLS', 'DPAD_RIGHT'), 0)
     DPAD_UP = int(config_file.get('CONTROLS', 'DPAD_UP'), 0)
@@ -40,16 +38,29 @@ def load_config_file():
     OPTIONS = int(config_file.get('CONTROLS', 'OPTIONS'), 0)
     PS = int(config_file.get('CONTROLS', 'PS'), 0)
     TOUCHPAD = int(config_file.get('CONTROLS', 'TOUCHPAD'), 0)
+# boolean choice of debug info
     SHOW_SIMILARITY_DEBUG = config_file.getboolean('DEBUG', 'SHOW_SIMILARITY_DEBUG')
     SHOW_DETECTION_RECT_DEBUG = config_file.getboolean('DEBUG', 'SHOW_DETECTION_RECT_DEBUG')
     SKIP_MENU_SELECTION = config_file.getboolean('DEBUG', 'SKIP_MENU_SELECTION')
+# from old GT7 game
+    STEERING_SIMILARITY_THRESHOLD = config_file.getfloat('CONFIG', 'STEERING_SIMILARITY_THRESHOLD')
+    USE_RACE_START_MACRO = config_file.getboolean('CONFIG', 'USE_RACE_START_MACRO')
 
     STEERING_RECT = json.loads(config_file.get('CONFIG', 'STEERING_RECT'))
     CROSS_CENTER_RECT = json.loads(config_file.get('CONFIG', 'CROSS_CENTER_RECT'))
     CROSS_RIGHT_RECT = json.loads(config_file.get('CONFIG', 'CROSS_RIGHT_RECT'))
     FINISH_RECT = json.loads(config_file.get('CONFIG', 'FINISH_RECT'))
     GT_LOGO_RECT = json.loads(config_file.get('CONFIG', 'GT_LOGO_RECT'))  
-    RACE_START_RECT = json.loads(config_file.get('CONFIG', 'RACE_START_RECT'))    
+    RACE_START_RECT = json.loads(config_file.get('CONFIG', 'RACE_START_RECT'))  
+# Lords of the Fallen
+    REST_INTERACT_RECT = json.loads(config_file.get('CONFIG', 'REST_INTERACT_RECT'))
+    ENEMY_ICON_RECT = json.loads(config_file.get('CONFIG', 'ENEMY_ICON_RECT'))
+    ARROW_SELECTED_RECT = json.loads(config_file.get('CONFIG', 'ARROW_SELECTED_RECT'))
+    BOXES_INWAY_RECT = json.loads(config_file.get('CONFIG', 'BOXES_INWAY_RECT'))
+    VIGOR_APPEARED_RECT = json.loads(config_file.get('CONFIG', 'VIGOR_APPEARED_RECT'))
+    REST_SELECT_RECT = json.loads(config_file.get('CONFIG', 'REST_SELECT_RECT'))
+
+    UNIVERSAL_THRESHOLD = config_file.getfloat('CONFIG', 'UNIVERSAL_THRESHOLD')
 
 def get_key_for_string(key):
     return globals()[key]
